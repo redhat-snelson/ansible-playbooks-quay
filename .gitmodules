@@ -1,0 +1,3 @@
+[submodule "roles/quay"]
+	path = roles/quay
+	url = git@github.com:snelson-redhat/ansible-role-quay.git

@@ -1,0 +1,15 @@
+## Roles
+roles/geerlingguy*
+roles/robertdebock.mysql*
+roles/quay
+
+## Ansible-Playbooks
+*.retry
+
+## Ansible-Inventory
+inventory/group_vars/all.yml
+inventory/hosts.ini
+
+## Ansible-Vault
+*.vault
+

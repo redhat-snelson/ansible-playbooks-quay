@@ -1,0 +1,25 @@
+[quay_database]
+localhost
+
+[quay_redis]
+localhost
+
+[quay_nfs]
+localhost
+
+[quay]
+localhost ansible_connection=local
+
+[quay_systems:children]
+quay_database
+quay_redis
+quay_nfs
+quay
+
+[quay_systems:vars]
+CONTAINER_RUNTIME="podman"
+QUAY_CONFIG_TAR="../../files/quay-config.tar.gz"
+QUAY_CONFIG=False
+QUAY_OBJECT_STORAGE=False
+WITH_CLAIR=True
+CLAIR_SERVICE_KEY_ID='27c0295e01f1cee08b8cb23825d1a162ee6aedba2b593d9b47003b408b76754c'

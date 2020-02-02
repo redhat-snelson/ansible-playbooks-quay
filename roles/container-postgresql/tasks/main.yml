@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-role-containers-postgresql
+- name: Configure firewall for PostgreSQL
+  include_tasks: tasks/firewall-setup.yml
+  vars:
+    ports:
+      - "{{ POSTGRES_PORT_5432_TCP_PORT }}/tcp"
+    firewall_zone: trusted
+    when: QUAY_POSTGRESQL_DEPLOY
+  tags:
+    - database
+
+- name: Deploy PostgreSQL
+  include_tasks: tasks/deploy-postgresql.yml
+  when: QUAY_POSTGRESQL_DEPLOY
+  tags:
+    - database
