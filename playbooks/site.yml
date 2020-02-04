@@ -3,20 +3,20 @@
 #   roles:
 #     - docker
 
-- hosts: quay_database
-  roles:
-    - container-mysql
-      #    - container-postgresql
-
-- hosts: quay_redis
-  roles:
-    - container-redis
-
 # - hosts: quay_nfs
 #   roles:
 #     - quay-storage
 #       vars:
 #         WITH_NFS: yes
+
+- hosts: quay_database
+  roles:
+    # - container-mysql
+    - container-postgresql
+
+- hosts: quay_redis
+  roles:
+    - container-redis
 
 - hosts: quay
   roles:

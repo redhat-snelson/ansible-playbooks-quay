@@ -3,6 +3,7 @@
 
 # @var MYSQL_CONTAINER_NAME: 'mysql' # Name to apply to mysql container
 MYSQL_CONTAINER_NAME: "mysql"
+MYSQL_IMAGE: "registry.access.redhat.com/rhscl/mysql-57-rhel7"
 
 QUAY_MYSQL_DEPLOY: True
 QUAY_DATABASE_CONTAINERIZE: True
