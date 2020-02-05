@@ -119,7 +119,7 @@ QUAY_REDIS_CONTAINERIZE: true
 QUAY_ROOT_DIR: /opt/quay
 
 # @var QUAY_STORAGE_DIR: 'unset' # Optional extra directory to create that can hold container images
-QUAY_STORAGE_DIR: "{{ QUAY_ROOT_DIR }}/storage"
+# QUAY_STORAGE_DIR: "{{ QUAY_ROOT_DIR }}/storage"
 
 ### Create Repo playbook ###
 # @var UPSTREAM_REGISTRY_PASSWORD: 'jdoe' # Username for the add repo playbook - should be replaced soon

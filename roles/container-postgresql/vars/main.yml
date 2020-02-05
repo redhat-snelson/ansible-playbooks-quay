@@ -1,9 +1,6 @@
 ---
 # vars file for ansible-role-containers-postgresql
-# @var postgresql_version: postgresql96 # The version of postgresql to deploy
-postgresql_version: postgresql96
+postgresql_container_name: "postgresql"
+postgresql_image: registry.access.redhat.com/rhscl/postgresql-96-rhel7
 
-POSTGRESQL_CONTAINER_NAME: "postgresql"
-POSTGRESQL_IMAGE: registry.access.redhat.com/rhscl/postgresql-96-rhel7
-
-QUAY_DATABASE_CONTAINERIZE: True
+quay_database_containerize: True
